@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Portafolio personal de desarrollo web y diseño digital.">
+    <meta name="author" content="George Alin Giia">
+    <meta name="keywords" content="portfolio, desarrollo web, HTML, CSS, diseño web">
+
+    <title>Mi Portfolio | Desarrollador Web</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+
+            <a href="#inicio" class="logo">MiPortfolio</a>
+
+            <nav class="nav" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section id="inicio" class="hero">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+                    <p class="hero-subtitle">Hola, soy</p>
+
+                    <h1>George Alin Giia </h1>
+
+                    <p class="hero-description">
+                        Estudiante y apasionado por el desarrollo web,
+                        el diseño y la creación de experiencias digitales.
+                    </p>
+
+                    <a href="#portfolio" class="button">
+                        Ver mis proyectos
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ==================== SOBRE MÍ ==================== -->
+        <section id="sobre-mi" class="about section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-subtitle">Conóceme</p>
+                    <h2>Sobre mí</h2>
+                </div>
+
+                <div class="about-content">
+
+                    <div class="about-text">
+                        <p>
+                            Soy una persona interesada en el mundo del
+                            desarrollo web y las nuevas tecnologías.
+                            Me gusta aprender, crear proyectos y mejorar
+                            mis conocimientos continuamente.
+                        </p>
+
+                        <p>
+                            Actualmente estoy aprendiendo HTML y CSS,
+                            trabajando en el desarrollo de páginas web
+                            modernas, accesibles y adaptables a diferentes
+                            dispositivos.
+                        </p>
+                    </div>
+
+                    <div class="skills">
+                        <h3>Mis habilidades</h3>
+
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>Diseño Responsive</li>
+                            <li>Flexbox y CSS Grid</li>
+                            <li>Trabajo en equipo</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== PORTFOLIO ==================== -->
+        <section id="portfolio" class="portfolio section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-subtitle">Mis trabajos</p>
+                    <h2>Portfolio</h2>
+                </div>
+
+                <!--
+                    CSS Grid se utiliza en esta sección
+                    para organizar los proyectos.
+                -->
+                <div class="projects-grid">
+
+                    <!-- Proyecto 1 -->
+                    <article class="project-card">
+
+                        <div class="project-image">
+                            <img
+                                src="https://picsum.photos/600/400?random=1"
+                                alt="Vista previa de un proyecto de página web corporativa"
+                            >
+                        </div>
+
+                        <div class="project-content">
+                            <h3>Página corporativa</h3>
+
+                            <p>
+                                Diseño de una página web moderna para
+                                una empresa ficticia.
+                            </p>
+
+                            <span class="project-tag">HTML & CSS</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Proyecto 2 -->
+                    <article class="project-card">
+
+                        <div class="project-image">
+                            <img
+                                src="https://picsum.photos/600/400?random=2"
+                                alt="Vista previa de una tienda online ficticia"
+                            >
+                        </div>
+
+                        <div class="project-content">
+                            <h3>Tienda online</h3>
+
+                            <p>
+                                Diseño de una tienda online adaptable
+                                a dispositivos móviles.
+                            </p>
+
+                            <span class="project-tag">Responsive</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Proyecto 3 -->
+                    <article class="project-card">
+
+                        <div class="project-image">
+                            <img
+                                src="https://picsum.photos/600/400?random=3"
+                                alt="Vista previa de una aplicación de gestión de tareas"
+                            >
+                        </div>
+
+                        <div class="project-content">
+                            <h3>Gestor de tareas</h3>
+
+                            <p>
+                                Concepto de interfaz para organizar
+                                tareas y proyectos personales.
+                            </p>
+
+                            <span class="project-tag">UI Design</span>
+                        </div>
+
+                    </article>
+
+
+                    <!-- Proyecto 4 -->
+                    <article class="project-card">
+
+                        <div class="project-image">
+                            <img
+                                src="https://picsum.photos/600/400?random=4"
+                                alt="Vista previa de un proyecto de blog personal"
+                            >
+                        </div>
+
+                        <div class="project-content">
+                            <h3>Blog personal</h3>
+
+                            <p>
+                                Diseño de un blog personal centrado
+                                en tecnología y desarrollo web.
+                            </p>
+
+                            <span class="project-tag">Web Design</span>
+                        </div>
+
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==================== CONTACTO ==================== -->
+        <section id="contacto" class="contact section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-subtitle">Hablemos</p>
+                    <h2>Contacto</h2>
+                </div>
+
+                <div class="contact-content">
+
+                    <div class="contact-text">
+                        <h3>¿Tienes un proyecto?</h3>
+
+                        <p>
+                            Si quieres contactar conmigo, puedes utilizar
+                            el siguiente formulario.
+                        </p>
+                    </div>
+
+                    <!-- Formulario -->
+                    <form class="contact-form" action="#" method="post">
+
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                placeholder="Escribe tu nombre"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="correo@ejemplo.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea
+                                id="mensaje"
+                                name="mensaje"
+                                rows="6"
+                                placeholder="Escribe tu mensaje..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="button">
+                            Enviar mensaje
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <p>
+                &copy; 2026 George Alin Giia. Todos los derechos reservados.
+            </p>
+
+            <nav aria-label="Redes sociales">
+                <ul class="social-links">
+                    <li>
+                        <a href="https://github.com/GeorgeAlinGiia" aria-label="GitHub">
+                            GitHub
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/in/george-alin-giia-503b71224/" aria-label="LinkedIn">
+                            LinkedIn
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
+```

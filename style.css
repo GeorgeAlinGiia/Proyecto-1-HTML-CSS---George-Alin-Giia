@@ -1,0 +1,531 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* ==================================================
+   VARIABLES CSS
+   ================================================== */
+
+:root {
+    --color-primary: #6c63ff;
+    --color-primary-dark: #5148d9;
+    --color-secondary: #f3f4ff;
+
+    --color-text: #22223b;
+    --color-text-light: #66667a;
+
+    --color-background: #ffffff;
+    --color-background-dark: #151525;
+
+    --color-border: #e5e5ef;
+
+    --font-title: Arial, Helvetica, sans-serif;
+    --font-body: Arial, Helvetica, sans-serif;
+
+    --container-width: 1100px;
+
+    --spacing-small: 1rem;
+    --spacing-medium: 2rem;
+    --spacing-large: 4rem;
+
+    --border-radius: 12px;
+
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==================================================
+   ESTILOS GENERALES
+   ================================================== */
+
+.container {
+    width: min(90%, var(--container-width));
+    margin: 0 auto;
+}
+
+.section {
+    padding: var(--spacing-large) 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-heading h2 {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+}
+
+.section-subtitle {
+    color: var(--color-primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+}
+
+
+/* ==================================================
+   HEADER
+   ================================================== */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header-container {
+    min-height: 70px;
+
+    /* FLEXBOX */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav-list {
+    /* FLEXBOX */
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-list a {
+    color: var(--color-text);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: var(--color-primary);
+}
+
+
+/* ==================================================
+   HERO
+   ================================================== */
+
+.hero {
+    min-height: 80vh;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--color-secondary),
+            var(--color-background)
+        );
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.hero-subtitle {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-family: var(--font-title);
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1;
+    margin: 1rem 0;
+}
+
+.hero-description {
+    color: var(--color-text-light);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+
+/* ==================================================
+   BOTONES
+   ================================================== */
+
+.button {
+    display: inline-block;
+
+    padding: 0.9rem 1.5rem;
+
+    border: none;
+    border-radius: var(--border-radius);
+
+    background-color: var(--color-primary);
+    color: white;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   SOBRE MÍ
+   ================================================== */
+
+.about {
+    background-color: var(--color-background);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    color: var(--color-text-light);
+}
+
+.skills {
+    background-color: var(--color-secondary);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+}
+
+.skills h3 {
+    margin-bottom: 1rem;
+}
+
+.skills li {
+    margin-bottom: 0.5rem;
+}
+
+.skills li::before {
+    content: "✓";
+    color: var(--color-primary);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+
+/* ==================================================
+   PORTFOLIO
+   ================================================== */
+
+.portfolio {
+    background-color: #f8f8fc;
+}
+
+/*
+    CSS GRID
+
+    Los proyectos se organizan automáticamente
+    en columnas según el tamaño disponible.
+*/
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--color-background);
+    border-radius: var(--border-radius);
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.project-image {
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    margin-bottom: 0.5rem;
+}
+
+.project-content p {
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+}
+
+.project-tag {
+    display: inline-block;
+
+    padding: 0.3rem 0.7rem;
+
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+
+    border-radius: 50px;
+
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   CONTACTO
+   ================================================== */
+
+.contact {
+    background-color: var(--color-background);
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+}
+
+.contact-text h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-text p {
+    color: var(--color-text-light);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 0.9rem 1rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    background-color: var(--color-background);
+
+    outline: none;
+
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-primary);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+.footer {
+    background-color: var(--color-background-dark);
+    color: white;
+
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-primary);
+}
+
+
+/* ==================================================
+   RESPONSIVE - TABLETS
+   ================================================== */
+
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.7rem;
+        padding: 1rem 0;
+    }
+
+    .nav-list {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* ==================================================
+   RESPONSIVE - MÓVILES
+   ================================================== */
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .section-heading h2 {
+        font-size: 2rem;
+    }
+
+    /*
+        En móvil los proyectos pasan a una sola columna.
+    */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image img {
+        height: 220px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
